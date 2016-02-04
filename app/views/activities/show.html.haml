@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %strong Date:
+  = @activity.date
+%p
+  %strong Duration:
+  = @activity.duration
+%p
+  %strong Description:
+  = @activity.description
+= link_to 'Edit', edit_activity_path(@activity)
+|
+= link_to 'Back', activities_path
