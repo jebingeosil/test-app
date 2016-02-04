@@ -33,6 +33,9 @@ gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Bootstrap UI framework support
+gem "twitter-bootstrap-rails"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -44,3 +47,7 @@ group :development, :test do
   gem 'spring'
 end
 
+group :development do
+	# Gem to handle mail delivery in development environment
+	gem 'letter_opener'
+end
