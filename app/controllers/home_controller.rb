@@ -4,6 +4,7 @@ class HomeController < ApplicationController
   end
 
   def dashboard
+  	@activities = current_user.get_all_activities
   end
 
   def manager_dashboard
