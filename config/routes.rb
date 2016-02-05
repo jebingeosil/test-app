@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   root to: "home#index"
   
 
-  resources :tasks, except: :index 
-  resources :activities
+  resources :tasks, except: [:index] do 
+    resources :activities
+  end
 
   resources :users
 
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
 
   get '/m-dashboard' => 'home#manager_dashboard', as: :manager_dashboard
 
-  get '/tasks' => 'users#tasks', as: :tasks
+  get '/tasks' => 'users#tasks', as: :custom_tasks
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

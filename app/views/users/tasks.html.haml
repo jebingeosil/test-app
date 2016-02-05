@@ -1,8 +1,8 @@
 .container
   .col-xs-12
     .row
-    	.pull-right
-    	  = link_to "Create Task", new_task_path if current_user.is_manager?
+      .pull-right
+        = link_to "Create Task", new_task_path, class: "btn btn-success" if current_user.is_manager?
     .row
       %h2 Tasks
       - if @tasks.count < 1

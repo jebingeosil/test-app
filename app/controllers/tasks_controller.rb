@@ -73,4 +73,8 @@ class TasksController < ApplicationController
     def task_params
       params.require(:task).permit(:start_date, :end_date, :status, :planned_hours)
     end
+
+    def authenticate_manager
+      redirect_to dashboard_path unless current_user && current_user.is_manager?
+    end
 end

@@ -18,6 +18,6 @@ class User < ActiveRecord::Base
 
   # Function to get all activities of a user
   def get_all_activities
-  	Activity.joins(:task).where(:tasks => { user_id: self.id })
+  	self.is_manager? ? Activity.all : Activity.joins(:task).where(:tasks => { user_id: self.id })
   end
 end

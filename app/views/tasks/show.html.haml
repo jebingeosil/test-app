@@ -1,16 +1,17 @@
-%p#notice= notice
-%p
-  %strong Start date:
-  = @task.start_date
-%p
-  %strong End date:
-  = @task.end_date
-%p
-  %strong Status:
-  = @task.status
-%p
-  %strong Planned hours:
-  = @task.planned_hours
-= link_to 'Edit', edit_task_path(@task)
-|
-= link_to 'Back', tasks_path
+.container
+	%p#notice= notice
+	%p
+	  %strong Start date:
+	  = @task.start_date
+	%p
+	  %strong End date:
+	  = @task.end_date
+	%p
+	  %strong Status:
+	  = @task.status
+	%p
+	  %strong Planned hours:
+	  = @task.planned_hours
+	= link_to 'Edit', edit_task_path(@task)
+	|
+	= link_to 'Back', tasks_path
