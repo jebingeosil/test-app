@@ -63,7 +63,7 @@ class UsersController < ApplicationController
   end
 
   def tasks
-    @tasks = current_user.manager? Tasks.all : current_user.tasks
+    @tasks = current_user.is_manager? ? Tasks.all : current_user.tasks
   end
 
   private

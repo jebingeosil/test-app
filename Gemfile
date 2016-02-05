@@ -39,6 +39,9 @@ gem "twitter-bootstrap-rails"
 # Haml for easy-html
 gem "haml-rails", "~> 0.9"
 
+# FOntawesome for fonts
+gem "font-awesome-rails"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

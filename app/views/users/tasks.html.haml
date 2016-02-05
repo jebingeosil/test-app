@@ -1,0 +1,27 @@
+.container
+  .col-xs-12
+    .row
+    	.pull-right
+    	  = link_to "Create Task", new_task_path if current_user.is_manager?
+    .row
+      %h2 Tasks
+      - if @tasks.count < 1
+        Sorry You dont have any Task to list
+      - else
+        .table.table-hover
+          .thead
+            .tr
+              .th S.No
+              .th Start Date
+              .th End Date
+              .th Status
+              .th Planned Hours
+              .th Action
+          .tbody
+            - @tasks.each do |task|
+              .td task.id
+              .td task.start_date
+              .td task.end_date
+              .td task.status
+              .td task.planned_hours
+              .td 

@@ -5,9 +5,9 @@ Rails.application.routes.draw do
 
   root to: "home#index"
   
-  resources :activities
 
-  resources :tasks
+  resources :tasks, except: :index 
+  resources :activities
 
   resources :users
 
